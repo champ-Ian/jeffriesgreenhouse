@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background: var(--light-color)
+}
+
+:root {
+    --black-color: #1c2606;
+    --dark-color: #445817;
+    --primary-color: #748b29;
+    --light-color: #babf3d;
+    --white-color: #f2f2f2;
+}
+
+/* Navbar */
+.navbar{
+    display: flex;
+    background-color: var(--white-color);
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+}
+.image{
+    width: 70px;
+}
+.main-menu{
+    width: 50%;
+    display: flex;
+    justify-content:space-between;
+}
+.main-menu a{
+    text-decoration: none;
+    color: var(--dark-color);
+    font-size: 1.1rem;
+}
+.main-menu a:hover{
+    transition-duration: 0.4s;
+    color: var(--light-color)
+}
+
+/* Contact */
+.contact{
+    padding: 20px;
+}
+.contact h1{
+    margin: 20px auto 5px;
+    text-align: center;
+    font-size: 1.8rem;
+}
+.line{
+    border: 1px solid var(--black-color);
+    margin: 0px auto 20px;
+    width: 140px;
+
+}
+.contacts{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.icon{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin: 0px auto 0px;
+    background-color: var(--white-color);
+}
+.email, .call{
+    width: 90%;
+    margin: 20px;
+}
+.email h2, .call h2{
+    text-align: center;
+    font-size: 1.3rem;
+}
+.email p, .call p{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Breakpoints */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .main-menu{
+        width: 40%;
+    }
+    .navbar{
+        height: 130px;
+    }
+    .main-menu a{
+        font-size: 1.3rem;
+    }
+    .image{
+        width: 100px;
+    }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .main-menu{
+        width: 30%;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .main-menu{
+        width: 25%;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .main-menu{
+        width: 20%;
+    }
+}

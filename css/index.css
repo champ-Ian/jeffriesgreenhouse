@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+:root {
+    --black-color: #1c2606;
+    --dark-color: #445817;
+    --primary-color: #748b29;
+    --light-color: #babf3d;
+    --white-color: #f2f2f2;
+}
+
+/* Navbar */
+.navbar{
+    display: flex;
+    background-color: var(--white-color);
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+}
+.image{
+    width: 70px;
+}
+.main-menu{
+    width: 50%;
+    display: flex;
+    justify-content:space-between;
+}
+.main-menu a{
+    text-decoration: none;
+    color: var(--dark-color);
+    font-size: 1.1rem;
+}
+.main-menu a:hover{
+    transition-duration: 0.4s;
+    color: var(--light-color)
+}
+
+/* Overview */
+.overview{
+    margin: 30px 20px 0px;
+}
+.overview h1{
+    text-align: center;
+    font-weight: bold;
+    color: var(--black-color)
+}
+.line{
+    border: 1px solid black;
+    width: 200px;
+    margin: 5px auto 0px;
+}
+.overview p{
+    color: var(--dark-color);
+    padding: 10px;
+}
+
+/* Picture */
+.picture{
+    width: 330px;
+    margin: 0px auto 0px;
+    position: relative;
+    padding: 0px 10px 0px;
+}
+.picture button{
+    font-size: 2rem;
+    border: none;
+    position: absolute;
+    color: var(--white-color);
+    background-color: #333;
+    padding: 10px;
+    border-radius: 40%;
+}
+.picture button:hover{
+    transition-duration: 0.4s;
+    background-color: #555;
+}
+.picture button:hover{
+    cursor: pointer;
+}
+.first-button{
+    top: 40%;
+    left: 30px;
+}
+.second-button{
+    top: 40%;
+    right: 30px;
+}
+.house{
+    display: flex;
+}
+.house img{
+    border-radius: 15px;
+    width: 275px;
+    margin: 20px auto 20px;
+}
+
+/* Attractions */
+.attractions{
+    background: var(--black-color);
+    margin: 20px auto 0px;
+    padding: 30px 10px 20px;
+    display: flex;
+    flex-direction: column;
+}
+.attractions h1{
+    color: var(--white-color);
+    font-size: 1.4rem;
+    font-weight: normal;
+    align-self: start;
+    width: 200px;
+    padding-left: 10px;
+}
+.attractions div{
+    margin: 10px 0px 0px;
+    border: 1px solid var(--white-color);
+    align-self: start;
+    width: 200px;
+}
+.attractions p{
+    color: var(--light-color);
+    margin: 10px auto 5px;
+    align-self: center;
+    padding: 10px;
+}
+.attractions a{
+    border-radius: 10px;
+    text-align: center;
+    width: 70px;
+    background: var(--white-color);
+    align-self: end;
+    font-size: 1.6rem;
+    color: #777;
+}
+.attractions a:hover{
+    transition-duration: 0.4s;
+    background-color: var(--light-color);
+}
+
+/* Contact */
+.contact{
+    background: var(--primary-color);
+    margin: 0px auto 0px;
+    padding: 30px 10px 20px;
+    display: flex;
+    flex-direction: column;
+}
+.contact h1{
+    color: var(--white-color);
+    font-size: 1.4rem;
+    font-weight: normal;
+    align-self: start;
+    width: 140px;
+    padding-left: 10px;
+}
+.contact div{
+    margin: 10px 0px 0px;
+    border: 1px solid var(--white-color);
+    align-self: start;
+    width: 140px;
+}
+.contact p{
+    color: var(--black-color);
+    margin: 10px auto 5px;
+    align-self: center;
+    padding: 10px;
+}
+.contact a{
+    border-radius: 10px;
+    text-align: center;
+    width: 70px;
+    background: var(--white-color);
+    align-self: end;
+    font-size: 1.6rem;
+    color: #777;
+}
+.contact a:hover{
+    transition-duration: 0.4s;
+    background-color: var(--dark-color);
+}
+
+/* Breakpoints */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .main-menu{
+        width: 40%;
+    }
+    .navbar{
+        height: 130px;
+    }
+    .main-menu a{
+        font-size: 1.3rem;
+    }
+    .image{
+        width: 100px;
+    }
+}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .main-menu{
+        width: 30%;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .main-menu{
+        width: 25%;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .main-menu{
+        width: 20%;
+    }
+}
