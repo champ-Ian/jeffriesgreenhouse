@@ -44,7 +44,78 @@ body {
     color: var(--light-color)
 }
 
-/* Map */
+/* Sort */
+.sort{
+    margin: 20px 0px 0px;
+    display: flex;
+    flex-direction: column;
+}
+.heading{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-bottom: 5px;
+}
+.line{
+    border: 1.2px solid black;
+    width: 65px;
+}
+.sort h1{
+    font-size: 1.2rem;
+    color: var(--black-color);
+}
+.general, .specific{
+    display: flex;
+    justify-content: start;
+    margin-left: 30px;
+}
+.general button, .specific button{
+    border: none;
+    text-decoration: none;
+    font-size: 0.8rem;
+    background: var(--light-color);
+    padding: 8px;
+    border-radius: 10px;
+    margin: 8px 3px 0px;
+}
+
+/* Attractions */
+.attractions{
+    margin: 40px auto 50px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+.img{
+    object-fit: cover;
+    height: 150px;
+    width: 250px;
+    border-radius: 10px;
+    margin: 0px auto 0px;
+}
+.name{
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 5px auto 0px;
+    color: var(--dark-color)
+}
+.distance, .type, .review{
+    margin-left: 10px;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+.link{
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    margin: 5px auto 50px;
+    width: 90%;
+    background: var(--light-color);
+}
 
 /* Breakpoints */
 /* Small devices (landscape phones, 576px and up) */
@@ -53,19 +124,47 @@ body {
         width: 40%;
     }
     .navbar{
-        height: 130px;
+        height: 100px;
     }
     .main-menu a{
         font-size: 1.3rem;
     }
     .image{
-        width: 100px;
+        width: 80px;
+    }
+    .sort{
+        margin-left: 20%;
+    }
+    .attractions{
+        width: 400px
+    }
+    .img{ 
+        width: 400px;
+        height: 250px;
+    }
+    .name{
+        font-size: 2rem; 
+    }
+    .link{
+        width: 70%;
+        margin: 10px auto 80px;
+        font-size: 1.6rem;
     }
 }
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     .main-menu{
         width: 30%;
+    }
+    .general button, .specific button{
+        font-size: 1rem;
+        padding: 10px;
+    }
+    .heading h1{
+        font-size: 1.6rem;
+    }
+    .heading div{
+        width: 90px;
     }
 }
 
