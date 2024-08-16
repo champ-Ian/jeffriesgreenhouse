@@ -19,8 +19,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/attractions.css">
 </head>
-<body>
-
+<body onload='generalChange(1), specificChange(1)'>
     <!-- Navbar -->
     <nav class="navbar">
         <a href="index.html">
@@ -32,8 +31,27 @@
         </div>
     </nav>
 
-    <!-- Map -->
-    <section class="map">
+    <!-- Sort -->
+    <section class="sort">
+        <div class="heading">
+            <h1>Sort by</h1>
+            <div class="line"></div>
+        </div>
+        <div class="general">
+            <button class="general1" onclick="generalChange(1)">NAME</button>
+            <button class="general2" onclick="generalChange(2)">DISTANCE</button>
+            <button class="general3" onclick="generalChange(3)">REVIEWS</button>
+        </div>
+        <div class="specific">
+            <button class="specific1" onclick="specificChange(1)">ALL</button>
+            <button class="specific2" onclick="specificChange(2)">RESTURANT</button>
+            <button class="specific3" onclick="specificChange(3)">PLAY</button>
+            <button class="specific4" onclick="specificChange(4)">SHOP</button>
+        </div>
+    </section>
+
+    <!-- Attraction -->
+    <section class="attractions">
 
     </section>
 
