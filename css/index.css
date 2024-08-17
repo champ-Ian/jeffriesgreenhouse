@@ -246,9 +246,19 @@ body {
     .line{
         width: 300px;
     }
+    .attractions, .contact{
+        width: 50%;
+    }
+    .attractions{
+        margin-top: 0px;
+    }
+    .attractions p, .contact p{
+        font-size: 1.4rem;
+        width: 300px;
+    }
     .attractions h1, .contact h1{
-        width: 500px;
-        font-size: 2rem;
+        width: 100%;
+        font-size: 1.6rem;
         align-self: center;
         margin: 0;
         text-align: center;
@@ -258,10 +268,14 @@ body {
         margin: 0;
     }
     .attractions div{
-        width: 450px;
+        width: 200px;
     }
     .contact div{
-        width: 180px;
+        width: 130px;
+    }
+    .otherSections{
+        margin-top: 50px;
+        display: flex;
     }
 }
 
