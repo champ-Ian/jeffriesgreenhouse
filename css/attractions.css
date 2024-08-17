@@ -82,21 +82,29 @@ body {
 /* Attractions */
 .attractions{
     margin: 40px auto 50px;
-    width: 250px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.container{
+    width: 300px;
+    background: var(--light-color);
+    margin: 20px auto 0px;
+    border-radius: 20px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
 }
 .img{
     object-fit: cover;
-    height: 150px;
-    width: 250px;
-    border-radius: 10px;
+    height: 170px;
+    width: 100%;
     margin: 0px auto 0px;
 }
 .name{
     font-size: 1.4rem;
     font-weight: bold;
-    margin: 5px auto 0px;
+    margin: 10px auto 10px;
     color: var(--dark-color)
 }
 .distance, .type, .review{
@@ -107,14 +115,14 @@ body {
 }
 .link{
     font-size: 1.2rem;
-    color: var(--dark-color);
+    color: var(--white-color);
     text-decoration: none;
     font-weight: bold;
     text-align: center;
     border-radius: 10px;
-    margin: 5px auto 50px;
-    width: 90%;
-    background: var(--light-color);
+    background: var(--dark-color);
+    margin: 10px auto 20px;
+    width: 80%;
 }
 
 /* Breakpoints */
@@ -136,19 +144,11 @@ body {
         margin-left: 20%;
     }
     .attractions{
-        width: 400px
+        width: 580px;
+        flex-direction: row;
     }
-    .img{ 
-        width: 400px;
-        height: 250px;
-    }
-    .name{
-        font-size: 2rem; 
-    }
-    .link{
-        width: 70%;
-        margin: 10px auto 80px;
-        font-size: 1.6rem;
+    .container{
+        width: 45%;
     }
 }
 /* Medium devices (tablets, 768px and up) */
@@ -173,6 +173,12 @@ body {
     .main-menu{
         width: 25%;
     }
+    .attractions{
+        width: 990px;
+    }
+    .container{
+        width: 31%;
+    }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
@@ -184,5 +190,11 @@ body {
 @media (min-width: 1400px) {
     .main-menu{
         width: 20%;
+    }
+    .attractions{
+        width: 1400px;
+    }
+    .container{
+        width: 23%;
     }
 }
