@@ -9,6 +9,7 @@ function start(){
     document.querySelector('.house7').style.display = 'none'
     document.querySelector('.house8').style.display = 'none'
     document.querySelector('.house9').style.display = 'none'
+    document.querySelector('.house10').style.display = 'none'
     document.querySelector('.first-button').style.display = 'none'
 }
 
@@ -46,6 +47,10 @@ function minus(){
         currentOne -= 1
         document.querySelector('.house8').style.display = 'block'
         document.querySelector('.house9').style.display = 'none'
+    }else if (currentOne==10){
+        currentOne -= 1
+        document.querySelector('.house9').style.display = 'block'
+        document.querySelector('.house10').style.display = 'none'
         document.querySelector('.second-button').style.display = 'block'
     }
 }
@@ -84,6 +89,10 @@ function plus(){
         currentOne += 1
         document.querySelector('.house8').style.display = 'none'
         document.querySelector('.house9').style.display = 'block'
+    }else if (currentOne==9){
+        currentOne += 1
+        document.querySelector('.house9').style.display = 'none'
+        document.querySelector('.house10').style.display = 'block'
         document.querySelector('.second-button').style.display = 'none'
     } 
 }
