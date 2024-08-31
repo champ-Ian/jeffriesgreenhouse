@@ -107,33 +107,42 @@ body {
     margin: 20px auto 20px;
 }
 .houseInfo{
+    display: flex; 
     width: 275px;
-    display: flex;
-    border-radius: 10px;
-    overflow: hidden;
     margin: 0px auto 0px;
+    justify-content: space-between;
 }
-.houseInfo-bedroom, .houseInfo-bathroom{
-    width: 50%;
+.houseInfo-bedroom, .houseInfo-bathroom, .houseInfo-loft{
+    background: var(--light-color);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 88px;
+}
+.houseInfo-bedroom h2, .houseInfo-bathroom h2, .houseInfo-loft h2{
+    color: var(--white-color);
+    font-size: 1rem;
+}
+.houseInfo-bedroom h3, .houseInfo-bathroom h3, .houseInfo-loft h3{
+    color: var(--dark-color);
+    margin-left: 4px;
+    font-size: 0.8rem;
+}
+.lot{
+    width: 275px;
+    margin: 10px auto 40px;
+    background: var(--dark-color);
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+    height: 30px;
 }
-.houseInfo-bedroom{
-    background: var(--light-color);
-}
-.houseInfo-bathroom{
-    background: var(--dark-color);
-}
-.houseInfo-bedroom h2, .houseInfo-bathroom h2{
+.lot p{
     color: var(--white-color);
-    margin-right: 5px;
-}
-.houseInfo-bedroom h3{
-    color: var(--dark-color);
-}
-.houseInfo-bathroom h3{
-    color: var(--light-color);
+    font-size: 0.8rem;
 }
 
 /* Attractions */
@@ -306,17 +315,6 @@ body {
         margin-top: 50px;
         display: flex;
     }
-    .houseInfo{
-        width: 400px;
-        height: 50px;
-    }
-    .houseInfo-bedroom h2, .houseInfo-bathroom h2{
-        font-size: 2rem;
-        margin-right: 10px;
-    }
-    .houseInfo-bedroom h3, .houseInfo-bathroom h3{
-        font-size: 1.4rem;
-    }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -349,4 +347,3 @@ body {
         width: 20%;
     }
 }
-
