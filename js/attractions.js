@@ -31,36 +31,18 @@ function makeAttraction(name, img, distance, type, review, link){
     container.appendChild(imgElem)
 
     //Name
-    let nameElem = document.createElement('div')
+    let nameElem = document.createElement('a')
     nameElem.setAttribute('class', "name");
+    nameElem.setAttribute('href', link);
+    nameElem.setAttribute('target', "_blank");
     nameElem.textContent = name
     container.appendChild(nameElem)
 
-    //Distance
-    let distanceElem = document.createElement('div')
-    distanceElem.setAttribute('class', "distance");
-    distanceElem.textContent = "Distance: " + distance + " miles"
-    container.appendChild(distanceElem)
-
-    //Type
-    let typeElem = document.createElement('div')
-    typeElem.setAttribute('class', "type");
-    typeElem.textContent = "Type: " + type
-    container.appendChild(typeElem)
-
-    //Review
-    let reviewElem = document.createElement('div')
-    reviewElem.setAttribute('class', "review");
-    reviewElem.textContent = "Review: " + review
-    container.appendChild(reviewElem)
-
-    //Link
-    let linkElem = document.createElement('a')
-    linkElem.setAttribute('class', "link");
-    linkElem.setAttribute('href', link);
-    linkElem.setAttribute('target', "_blank");
-    linkElem.textContent = 'Visit'
-    container.appendChild(linkElem)
+    //Info 
+    let infoElem = document.createElement('div')
+    infoElem.setAttribute('class', 'info')
+    infoElem.textContent = "Distance: " + distance + " miles • Type: " + type + " • Google Review: " + review
+    container.appendChild(infoElem)
 }
 
 function listPrint(attractionList){
@@ -141,55 +123,55 @@ curSpecific = 1;
 function generalChange(num){
     if (num ==1){
         generalClear()
-        document.querySelector(".general1").style.background="var(--dark-color)"
+        document.querySelector(".general1").style.background="var(--light-color)"
         curGeneral = 1;
         limitAttractions(curGeneral, curSpecific)
     } else if (num==2){
         generalClear()
-        document.querySelector(".general2").style.background="var(--dark-color)"
+        document.querySelector(".general2").style.background="var(--light-color)"
         curGeneral = 2;
         limitAttractions(curGeneral, curSpecific)
     } else if (num==3){
         generalClear()
-        document.querySelector(".general3").style.background="var(--dark-color)"
+        document.querySelector(".general3").style.background="var(--light-color)"
         curGeneral = 3;
         limitAttractions(curGeneral, curSpecific)
     }
 }
 
 function generalClear(){
-    document.querySelector(".general1").style.background="var(--light-color)"
-    document.querySelector(".general2").style.background="var(--light-color)"
-    document.querySelector(".general3").style.background="var(--light-color)"
+    document.querySelector(".general1").style.background="#ffffff"
+    document.querySelector(".general2").style.background="#ffffff"
+    document.querySelector(".general3").style.background="#ffffff"
 }
 
 function specificChange(num){
     if (num ==1){
         specificClear()
-        document.querySelector(".specific1").style.background="var(--dark-color)"
+        document.querySelector(".specific1").style.background="var(--light-color)"
         curSpecific = 1;
         limitAttractions(curGeneral, curSpecific)
     } else if (num==2){
         specificClear()
-        document.querySelector(".specific2").style.background="var(--dark-color)"
+        document.querySelector(".specific2").style.background="var(--light-color)"
         curSpecific = 2;
         limitAttractions(curGeneral, curSpecific)
     }else if (num==3){
         specificClear()
-        document.querySelector(".specific3").style.background="var(--dark-color)"
+        document.querySelector(".specific3").style.background="var(--light-color)"
         curSpecific = 3;
         limitAttractions(curGeneral, curSpecific)
     } else if (num==4){
         specificClear()
-        document.querySelector(".specific4").style.background="var(--dark-color)"
+        document.querySelector(".specific4").style.background="var(--light-color)"
         curSpecific = 4;
         limitAttractions(curGeneral, curSpecific)
     }
 }
 
 function specificClear(){
-    document.querySelector(".specific1").style.background="var(--light-color)"
-    document.querySelector(".specific2").style.background="var(--light-color)"
-    document.querySelector(".specific3").style.background="var(--light-color)"
-    document.querySelector(".specific4").style.background="var(--light-color)"
+    document.querySelector(".specific1").style.background="#ffffff"
+    document.querySelector(".specific2").style.background="#ffffff"
+    document.querySelector(".specific3").style.background="#ffffff"
+    document.querySelector(".specific4").style.background="#ffffff"
 }
