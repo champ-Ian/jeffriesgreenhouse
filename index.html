@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3HXYMSY3ZK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3HXYMSY3ZK');
-</script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Stay at the perfect cozy cottage right next to Big Bear Lake.">
@@ -22,6 +12,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Google Font (Cedarville Cursive) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -44,68 +39,137 @@
 
     <!-- Overview -->
     <section class="overview">
-        <h1>WELCOME TO JEFFRIES GREEN HOUSE</h1>
-        <div class="line"></div>
-        <p>Jeffries Green House is a perfect place to retreat for your vacation.
-            We have clean and family friendly accommodations that will suit your needs!
-        </p>
+        <h1 class="intro">Welcome to</h1>
+        <h1 class="title">Jeffries Green House</h1>
     </section>
 
     <!-- Picture -->
     <section class="picture">
-        <button class="first-button" onclick="minus()">
-            <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <button class="second-button" onclick="plus()">
-            <i class="fa-solid fa-chevron-right"></i>
-        </button>
-        <div class="house">
-            <img src="img/house1.jpg" alt="house1" class="house1">
-            <img src="img/house2.JPG" alt="house2" class="house2">
-            <img src="img/house3.JPG" alt="house3" class="house3">
-            <img src="img/house4.JPG" alt="house4" class="house4">
-            <img src="img/house5.JPG" alt="house5" class="house5">
-            <img src="img/house6.JPG" alt="house6" class="house6">
-            <img src="img/house7.JPG" alt="house7" class="house7">
-            <img src="img/house8.JPG" alt="house8" class="house8">
-            <img src="img/house9.jpg" alt="house9" class="house9">
-            <img src="img/house10.jpg" alt="house9" class="house10">
-        </div>
-        <div class="houseInfo">
-            <div class="houseInfo-bedroom">
-                <h2>2</h2>
-                <h3>Bedroom</h3>
-            </div>
-            <div class="houseInfo-bathroom">
-                <h2>2</h2>
-                <h3>Bathroom</h3>
-            </div>
-            <div class="houseInfo-loft">
-                <h2>1</h2>
-                <h3>Loft</h3>
-            </div>
-        </div>
-        <div class="lot">
-            <p>Lot fits RV and Boat</p>
+        <div class="house-container">
+            <img id="triggerImage" src="img/exterior1.jpg" alt="Picture of Exterior">
+            <button id="openPopup"><i class="fa-solid fa-arrow-down"></i></button>
         </div>
     </section>
 
-    <section class="otherSections">
-        <!-- Attractions -->
-        <section class="attractions">
-            <h1>Check out Nearby Attractions!</h1>
-            <div class="line"></div>
-            <p>Were right next to Snow Summit Mountain, The Village and so much more.</p>
-            <a href="attractions.html"><i class="fa-solid fa-arrow-right-long"></i></a>
-        </section>
+    <!-- Popup -->
+    <section class="popup" id="popupsection">
+        <button id="backButton" class="back-button"><i class="fa-solid fa-arrow-left"></i></button>
+        <div class="popup-body">
+            <h2>Living Room</h2>
+            <p>Sofa bed • Books and reading material • TV</p>
+            <img src="img/livingroom1.jpg" alt="Living Room Picure 1" class="popup-image">
+            <img src="img/livingroom2.jpg" alt="Living Room Picure 2" class="popup-image">
 
-        <!-- Contact -->
-        <section class="contact">
-            <h1>Contact Us!</h1>
-            <div class="line"></div>
+            <h2>Kitchen</h2>
+            <p>Baking sheet • Coffee • Cooking basics • Dishwasher • 
+                Hot water • kettle • Microwave • Oven • Refrigerator • 
+                Rice maker • Stove • Toaster • Wine glasses • Dishes and silverware</p>
+            <img src="img/kitchen.jpg" alt="Kitchen Picture" class="popup-image">
+
+            <h2>Dining Area</h2>
+            <p>Dining table • Board games • Carbon monoxide alarm • Cooking basics</p>  
+            <img src="img/diningarea.jpg" alt="Dining Area Picture" class="popup-image">
+
+            <h2>Bedroom 1</h2>
+            <p>2 single beds • Clothing storage • Hangers</p>  
+            <img src="img/bedroom1.jpg" alt="Bedroom Picture 1" class="popup-image">
+
+            <h2>Bedroom 2</h2>
+            <p>Queen bed • Bed linens • Extra pillows and blankets • Hangers • Room-darkening shades</p> 
+            <img src="img/bedroom2.jpg" alt="Bedroom Picture 2" class="popup-image"> 
+
+            <h2>Bathroom 1</h2>      
+            <img src="img/bathroom1.jpg" alt="Bathroom Picture 1" class="popup-image">
+            
+            <h2>Bathroom 2</h2>
+            <img src="img/bathroom2.jpg" alt="Bathroom Picture 2" class="popup-image">
+
+            <h2>Loft</h2>
+            <img src="img/loft.jpg" alt="Loft Picture 2" class="popup-image">
+
+            <h2>Exterior</h2>
+            <img src="img/exterior1.jpg" alt="Exterior Picture 1" class="popup-image">
+            <img src="img/exterior2.jpg" alt="Exterior Picture 2" class="popup-image">
+
+            <h2>Additional Photos</h2>
+            <img src="img/add1.jpg" alt="Additional Picture 1" class="popup-image">
+            <img src="img/add2.jpg" alt="Additional Picture 2" class="popup-image">
+        </div>
+    </section>
+    
+    <div class="house-description">4 guests • 2 bedrooms • 4 beds • 2 baths</div>
+    
+    <!-- Description -->
+    <section class="description">
+        <p class="info">Discover the charm of Jeffries Green House, your 
+            perfect mountain retreat nestled in all attra
+            ctions you could expect in Big Bear.
+        </p>
+        <button id="showmorebutton">Show more</button>
+    </section>
+
+    <!-- Show More -->
+    <section class="showmore" id="showmoresection">
+        <button id="closebutton" class="close-button"><i class="fa-solid fa-arrow-left"></i></button>
+        <p>
+            Discover the charm of Jeffries Green House, your perfect mountain retreat nestled in all 
+            attractions you could expect in Big Bear. This cozy cottage-style home offers the 
+            ultimate in comfort and convenience, ideal for both winter sports enthusiasts and 
+            summer adventurers.
+        </p>
+        <p>
+            It has a big enough lot for your RV and boat parking!
+        </p>
+        <p>
+            Right off the main street (Big Bear Blvd), the house is ideally located next to Big Bear Lake 
+            and Meadow Park. A short walk around the corner will take you to well-maintained pickleball 
+            and tennis courts, as well as other recreational facilities. It also offers easy access to 
+            shopping, dining, and skiing within 5 minutes.
+        </p>
+        <p>
+            Throughout the seasons, Jeffries Green House transforms into a prime spot for mountain activities 
+            and exploration. Whether you're hitting the trails or enjoying a serene afternoon by the lake, this 
+            home provides a comfortable and inviting base. Embrace the cozy ambiance and let Jeffries Green House 
+            become your home away from home in the heart of the mountains.
+        </p>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="review">
+            <p class="quote start"><i class="fa-solid fa-quote-left"></i></p>
+            <p class="review_content">The location and facilities were great. Especially, 
+                the workspace in the loft was the perfect place to escape from my kids. 
+                Big Bear Lake was so close my wife enjoyed walking around there.
+                The host recommended mountain biking at Snow Summit, and it was perfect 
+                for my kids. We spent only one night so didn't have a chance to cook, 
+                but the various kitchen gadgets seem to work perfectly for long-term guests.
+            </p>
+            <p class="quote end"><i class="fa-solid fa-quote-right"></i></p>
+            <p class="person">Dabin</p>
+            <div class="stars">
+                <p><i class="fa-solid fa-star"></i></p>
+                <p><i class="fa-solid fa-star"></i></p>
+                <p><i class="fa-solid fa-star"></i></p>
+                <p><i class="fa-solid fa-star"></i></p>
+                <p><i class="fa-solid fa-star"></i></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Sections -->
+    <section class="otherSections">
+        <div class="attractions">
+            <h2>Attractions</h2>
+            <p>Were right next to Snow Summit Mountain, The Village and so much more.</p>
+            <a href="attractions.html">Show more</a>
+        </div>
+
+        <div class="contact">
+            <h2>Contact Us</h2>
             <p>Want to make a reservation or just have some questions or comments?</p>
-            <a href="contact.html"><i class="fa-solid fa-arrow-right-long"></i></a>
-        </section>
+            <a href="contact.html">Show more</a>
+        </div>
     </section>
 
     <!-- Javascript -->
