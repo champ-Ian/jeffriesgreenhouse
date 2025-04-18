@@ -46,155 +46,182 @@ body {
 
 /* Sort */
 .sort{
-    margin: 20px 0px 0px;
+    margin: 20px 0px 10px;
     display: flex;
     flex-direction: column;
-}
-.heading{
-    display: flex;
-    flex-direction: column;
-    margin-left: 30px;
-    margin-bottom: 5px;
-}
-.line{
-    border: 1.2px solid black;
-    width: 65px;
-}
-.sort h1{
-    font-size: 1.2rem;
-    color: var(--black-color);
+    padding-left: 20px;
 }
 .general, .specific{
     display: flex;
     justify-content: start;
-    margin-left: 30px;
+}
+.general{
+    margin-bottom: 5px;
 }
 .general button, .specific button{
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     border: none;
     text-decoration: none;
-    font-size: 0.8rem;
+    font-size: 1rem;
     background: var(--light-color);
     padding: 8px;
     border-radius: 10px;
-    margin: 8px 3px 0px;
+    margin: 13px 4px 0px;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
-
+.sort button:hover{
+    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
+}
 /* Attractions */
 .attractions{
-    margin: 40px auto 50px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    padding: 20px;
 }
-.container{
-    width: 300px;
-    background: var(--light-color);
-    margin: 20px auto 0px;
-    border-radius: 20px;
+.container {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
+    max-width: 320px;
+    margin: 15px auto;
 }
-.img{
-    object-fit: cover;
-    height: 170px;
+.container:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.4);
+}
+.img {
     width: 100%;
-    margin: 0px auto 0px;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid #e0e0e0;
 }
-.name{
-    font-size: 1.4rem;
-    font-weight: bold;
-    margin: 10px auto 10px;
-    color: var(--dark-color)
-}
-.distance, .type, .review{
-    margin-left: 10px;
-    font-size: 1.1rem;
-    color: var(--primary-color);
-    font-weight: bold;
-}
-.link{
-    font-size: 1.2rem;
-    color: var(--white-color);
+.name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    padding: 16px 16px 8px;
     text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 10px;
-    background: var(--dark-color);
-    margin: 10px auto 20px;
-    width: 80%;
+    transition: color 0.2s ease;
+}
+.name:hover {
+    color: #1b5e20;
+    text-decoration: underline;
+}
+.info {
+    font-size: 0.95rem;
+    color: #4b4b4b;
+    padding: 0 16px 16px;
+    line-height: 1.5;
+    word-break: break-word;
 }
 
-/* Breakpoints */
+/* Base navbar styles (from your original CSS) */
+.navbar {
+    display: flex;
+    background-color: var(--white-color);
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+}
+.image {
+    width: 70px;
+}
+.main-menu {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+.main-menu a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-size: 1.1rem;
+}
+.main-menu a:hover {
+    transition-duration: 0.4s;
+    color: var(--light-color)
+}
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-    .main-menu{
-        width: 40%;
-    }
-    .navbar{
-        height: 100px;
-    }
-    .main-menu a{
-        font-size: 1.3rem;
-    }
-    .image{
-        width: 80px;
-    }
-    .sort{
-        margin-left: 20%;
-    }
-    .attractions{
-        width: 580px;
-        flex-direction: row;
-    }
-    .container{
-        width: 45%;
-    }
+  /* Navbar adjustments */
+  .navbar {
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  
+  .main-menu {
+    width: 40%;
+  }
 }
+
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    .main-menu{
-        width: 30%;
-    }
-    .general button, .specific button{
-        font-size: 1rem;
-        padding: 10px;
-    }
-    .heading h1{
-        font-size: 1.6rem;
-    }
-    .heading div{
-        width: 90px;
-    }
+  /* Navbar */
+  .navbar {
+    padding: 0 40px;
+  }
+  
+  .image {
+    width: 80px;
+  }
+  
+  .main-menu {
+    width: 30%;
+  }
+  
+  .main-menu a {
+    font-size: 1.2rem;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    .main-menu{
-        width: 25%;
-    }
-    .attractions{
-        width: 990px;
-    }
-    .container{
-        width: 31%;
-    }
+  /* Navbar */
+  .navbar {
+    padding: 0 60px;
+  }
+  
+  .image {
+    width: 90px;
+  }
+  
+  .main-menu {
+    width: 25%;
+  }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
+  /* Navbar */
+  .navbar {
+    padding: 0 80px;
+    height: 120px;
+  }
+  
+  .image {
+    width: 100px;
+  }
+  
+  .main-menu {
+    width: 20%;
+  }
+  
+  .main-menu a {
+    font-size: 1.3rem;
+  }
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
-    .main-menu{
-        width: 20%;
-    }
-    .attractions{
-        width: 1400px;
-    }
-    .container{
-        width: 23%;
-    }
+  /* Navbar */
+  .navbar {
+    padding: 0 100px;
+  }
 }
