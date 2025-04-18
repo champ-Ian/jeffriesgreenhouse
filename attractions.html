@@ -1,21 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3HXYMSY3ZK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-3HXYMSY3ZK');
-</script>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Stay at the perfect cozy cottage right next to Big Bear Lake.">
 
-    <title>Jeffries Green House | Attractions</title>
+    <title>Jeffries Green House | Contact</title>
     <link rel="icon" href="img/logo.png" type="image/x-icon">
 
     <!-- Google Font (roboto) -->
@@ -27,9 +17,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/attractions.css">
+    <link rel="stylesheet" href="css/contact.css">
 </head>
-<body onload='generalChange(1), specificChange(1)'>
+<body>
+
     <!-- Navbar -->
     <nav class="navbar">
         <a href="index.html">
@@ -41,31 +32,41 @@
         </div>
     </nav>
 
-    <!-- Sort -->
-    <section class="sort">
-        <div class="heading">
-            <h1>Sort by</h1>
-            <div class="line"></div>
+    <!-- Contact Us -->
+    <section class="contact">
+        <h1>Get in Touch</h1>
+        <div class="contacts">
+            <div class="contact-card">
+                <div class="card-content">
+                    <div class="icon email-icon" aria-label="Email"><i class="fa-solid fa-envelope"></i></div>
+                    <div class="info">
+                        <h2>Email</h2>
+                        <p>jeffriesgreenhouse@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="card-content">
+                    <div class="icon phone-icon" aria-label="Phone"><i class="fa-solid fa-phone"></i></div>
+                    <div class="info">
+                        <h2>Phone</h2>
+                        <p>(858)-525-3348</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-card">
+                <div class="card-content">
+                    <div class="icon house-icon" aria-label="House"><i class="fa-solid fa-house"></i></div>
+                    <div class="info">
+                        <h2>Airbnb</h2>
+                        <p>https://rb.gy/c5ttmq</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="general">
-            <button class="general1" onclick="generalChange(1)">NAME</button>
-            <button class="general2" onclick="generalChange(2)">DISTANCE</button>
-            <button class="general3" onclick="generalChange(3)">REVIEWS</button>
-        </div>
-        <div class="specific">
-            <button class="specific1" onclick="specificChange(1)">ALL</button>
-            <button class="specific2" onclick="specificChange(2)">RESTURANT</button>
-            <button class="specific3" onclick="specificChange(3)">PLAY</button>
-            <button class="specific4" onclick="specificChange(4)">SHOP</button>
-        </div>
-    </section>
-
-    <!-- Attraction -->
-    <section class="attractions">
-
     </section>
 
     <!-- Javascript -->
-    <script src="js/attractions.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>
